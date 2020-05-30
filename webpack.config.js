@@ -4,19 +4,19 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
     contentBase: './public',
   },
   module: {
     rules: [
-    {
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: ['babel-loader']
-    }
-    ]
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
 };
