@@ -1,7 +1,6 @@
 {
   "name": "demo_fictional-company_website_miniproject",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/dario-piotrowicz/ReactJS-CSS_demo_fictional-company_website_miniproject.git",
   "author": "Dario Piotrowicz <dario.piotrowicz@gmail.com>",
   "license": "MIT",
