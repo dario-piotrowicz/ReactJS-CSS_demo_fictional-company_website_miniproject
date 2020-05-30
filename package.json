@@ -5,7 +5,8 @@
   "author": "Dario Piotrowicz <dario.piotrowicz@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "format": "prettier --write \"src/**/*.(js|jsx)\""
   },
   "dependencies": {
     "react": "^16.13.1",
