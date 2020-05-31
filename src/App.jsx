@@ -2,12 +2,22 @@ import React from 'react';
 import './App.scss';
 import './common/styles/utility.styles.scss';
 import Header from '../src/components/header/header.component';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/home/home.page.component';
 
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-    </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="*">
+          <h1>PAGE NOT FOUND</h1>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 };
 

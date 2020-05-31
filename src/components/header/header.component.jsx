@@ -2,6 +2,7 @@ import React from 'react';
 import './header.styles.scss';
 import { faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -18,19 +19,19 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a>Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a>About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a>Cases</a>
+            <Link to="/cases">Cases</Link>
           </li>
           <li>
-            <a>Blog</a>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <a>Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
