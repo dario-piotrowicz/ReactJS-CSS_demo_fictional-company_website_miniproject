@@ -8,6 +8,10 @@ module.exports = {
   },
   devServer: {
     contentBase: './public',
+    watchContentBase: true,
+    watchOptions: {
+      ignored: /node_modules/,
+    },
   },
   module: {
     rules: [
