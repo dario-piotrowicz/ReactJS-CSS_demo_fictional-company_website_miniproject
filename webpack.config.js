@@ -12,6 +12,7 @@ module.exports = {
     watchOptions: {
       ignored: /node_modules/,
     },
+    historyApiFallback: true,
   },
   module: {
     rules: [
