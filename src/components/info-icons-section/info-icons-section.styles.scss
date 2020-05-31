@@ -1,0 +1,28 @@
+@import '../../common/styles/constants.scss';
+
+section.info-icons-section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+
+  .info-icon-item {
+    padding: 30px;
+    background-color: #fff;
+    flex: 1;
+
+    h3 {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .fa-icon {
+      display: inline-block;
+      color: #fff;
+      background-color: $color-primary;
+      padding: 1rem;
+      border-radius: 50%;
+      margin: 10px;
+    }
+  }
+}
