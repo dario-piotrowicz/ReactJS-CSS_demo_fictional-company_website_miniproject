@@ -8,5 +8,6 @@ In the previous miniproject I did ( [Demo Hotel Miniproject](https://github.com/
 
 This time I'm still not using CRA, but I want to use JSX, Babel and Webpack (and SASS). So the new challenge is to setup the whole react application up by myself and configuring manually the aforementioned tools.
 
-Other aspect I'd like to mention is:
+One more aspect I'd like to mention is:
+
 - All UI Designs and HTML/CSS are taken from the course and I'm coding along, so that is not designed by me, what is completely mine are the files structure and the aforementioned configration and react aspects
