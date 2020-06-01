@@ -4,6 +4,7 @@ import Hero from '../../components/hero/hero.component';
 import InfoIconsSection from '../../components/info-icons-section/info-icons-section.component';
 import SolutionsSection from '../../components/solutions-section/solutions-section.component';
 import CasesSection from '../../components/cases-section/cases-section.component';
+import BlogSection from '../../components/blog-section/blog-section.component';
 
 const Home = () => (
   <main>
@@ -11,6 +12,7 @@ const Home = () => (
     <InfoIconsSection />
     <SolutionsSection />
     <CasesSection />
+    <BlogSection />
   </main>
 );
 
