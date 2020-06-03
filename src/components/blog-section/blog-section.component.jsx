@@ -1,23 +1,22 @@
 import React from 'react';
 import './blog-section.styles.scss';
 import blog from '../../assets/images/home/blog.jpg';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import ContentTextPreview from '../content-text-preview/content-text-preview.component';
 
 const BlogSection = () => {
   return (
     <section className="blog-section">
       <div className="content">
-        <h4>January 1 1970</h4>
-        <h2>Blog Post One</h2>
-        <p>
-          Super amazing blog post about something super amazing! Do you want to
-          read something super amazing? check out our amazing blog post!
-        </p>
-        <Link className="btn" to="/blog">
-          <FontAwesomeIcon icon={faChevronRight} /> Read Our Blog
-        </Link>
+        <ContentTextPreview
+          subtitle="January 1 1970"
+          title="Blog Post One"
+          description="Super amazing blog post about something super
+          amazing! Do you want to read something super amazing?
+          check out our amazing blog post!"
+          buttonText="Read Our Blog"
+          buttonLinkTo="/blog"
+          className="content"
+        />
       </div>
       <div className="image">
         <img src={blog} alt="people" />
