@@ -5,6 +5,7 @@ import InfoIconsSection from '../../components/info-icons-section/info-icons-sec
 import SolutionsSection from '../../components/solutions-section/solutions-section.component';
 import CasesSection from '../../components/cases-section/cases-section.component';
 import BlogSection from '../../components/blog-section/blog-section.component';
+import TeamSection from '../../components/team-section/team-section.component';
 
 const Home = () => (
   <main>
@@ -13,6 +14,7 @@ const Home = () => (
     <SolutionsSection />
     <CasesSection />
     <BlogSection />
+    <TeamSection />
   </main>
 );
 
