@@ -15,7 +15,7 @@ const PersonItem = ({ imageSrc, name, position }) => {
   );
 };
 PersonItem.propTypes = {
-  imageSrc: PropTypes.object.isRequired,
+  imageSrc: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
 };
@@ -36,7 +36,7 @@ const TeamSection = () => {
       </header>
       <div className="people">
         {peopleDetails.map((person) => (
-          <PersonItem {...person} />
+          <PersonItem key={`${person.name} - ${person.position}`} {...person} />
         ))}
       </div>
     </section>
