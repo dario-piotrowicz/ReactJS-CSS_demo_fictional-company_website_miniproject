@@ -6,6 +6,7 @@ section.solutions-section {
 
   .image {
     flex: 1;
+    display: flex;
 
     img {
       flex: 1;
@@ -19,5 +20,9 @@ section.solutions-section {
     flex: 1;
     color: #fff;
     background-color: $color-primary;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }

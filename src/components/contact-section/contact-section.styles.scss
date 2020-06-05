@@ -6,6 +6,7 @@ section.contact-section {
 
   .image {
     flex: 1;
+    display: flex;
 
     img {
       flex: 1;
@@ -71,5 +72,8 @@ section.contact-section {
         }
       }
     }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }
