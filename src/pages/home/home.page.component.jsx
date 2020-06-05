@@ -6,6 +6,7 @@ import SolutionsSection from '../../components/solutions-section/solutions-secti
 import CasesSection from '../../components/cases-section/cases-section.component';
 import BlogSection from '../../components/blog-section/blog-section.component';
 import TeamSection from '../../components/team-section/team-section.component';
+import ContactSection from '../../components/contact-section/contact-section.component';
 
 const Home = () => (
   <main>
@@ -15,6 +16,7 @@ const Home = () => (
     <CasesSection />
     <BlogSection />
     <TeamSection />
+    <ContactSection />
   </main>
 );
 
