@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/home/home.page.component';
 import Footer from './components/footer/footer.component';
 import Blog from './pages/blog/blog.page.component';
+import PageNotFound from './pages/page-not-found/page-not-found.page.component';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
           <Blog />
         </Route>
         <Route path="*">
-          <h1>PAGE NOT FOUND</h1>
+          <PageNotFound />
         </Route>
       </Switch>
       <Footer />
