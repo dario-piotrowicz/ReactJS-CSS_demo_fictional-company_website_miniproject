@@ -10,8 +10,8 @@ const BlogPreview = ({
   title,
   author,
   date,
-  description,
-  linkTo,
+  paragraphs,
+  url,
   blogStyle,
 }) => {
   const dateStr = date.toDateString();
@@ -27,8 +27,8 @@ const BlogPreview = ({
             <FontAwesomeIcon className="fa-icon" icon={faUser} />
             Posted by <strong>{author}</strong> | {dateStr}
           </p>
-          <p>{description}</p>
-          <Link className="btn" to={linkTo}>
+          {paragraphs[0] ? <p>{paragraphs[0]}</p> : null}
+          <Link className="btn" to={url}>
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} />
             Read More
           </Link>
@@ -42,8 +42,8 @@ BlogPreview.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
-  description: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired,
+  paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  url: PropTypes.string.isRequired,
   blogStyle: PropTypes.number,
 };
 
