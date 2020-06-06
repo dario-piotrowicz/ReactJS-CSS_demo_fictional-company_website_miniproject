@@ -16,7 +16,7 @@ const Header = () => {
 
     const updateBackgroundOnScroll = () => {
       const yOffset = window.pageYOffset;
-      if (yOffset > 250) {
+      if (yOffset > 150) {
         setTransparentBg(false);
       } else {
         setTransparentBg(true);
