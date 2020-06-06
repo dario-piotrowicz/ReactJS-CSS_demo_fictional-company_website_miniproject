@@ -18,7 +18,7 @@ const SolutionsSection = () => {
           solutions for you. We do not actually do anything. This is
           also just some silly text put here as placeholder text."
           buttonText="Read More"
-          buttonLinkTo="/about"
+          buttonLinkTo="/blog/post_about"
           className="content"
         />
       </div>

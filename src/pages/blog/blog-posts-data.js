@@ -1,6 +1,7 @@
 import blogImg1 from '../../assets/images/blog/blog1.jpg';
 import blogImg2 from '../../assets/images/blog/blog2.jpg';
 import blogImg3 from '../../assets/images/blog/blog3.jpg';
+import peopleImg from '../../assets/images/home/people.jpg';
 
 const blogPostsData = [
   {
@@ -66,6 +67,28 @@ const blogPostsData = [
     are so yummy!`,
     ],
     url: '/blog/post3',
+  },
+  {
+    postId: 'post_about',
+    imageSrc: peopleImg,
+    title: 'FictionalFinances',
+    author: 'John',
+    date: new Date(2020, 0, 1),
+    paragraphs: [
+      `We are really pleased to present to you our fantastic and totally real company.
+      Our service is top notch and totally real, we do and get financial stuff done,
+      whatever that means.`,
+      `But we are so very pleased that you decided to visit our website and consider us
+      for any future services.`,
+      `If in need of something visit our home page and request that something via the
+      contact form you can find at the bottom of the page.`,
+      `In our footer you can even find a github icon linking to our github repository,
+      in which you can find the source code for this awesome website, go and check that out!`,
+      `All in all I on behalf of this (again) totally existing company welcome you and
+      thank you for your interest, I hope you will enjoy our fabulous website and consider
+      us for future financial something something.`,
+    ],
+    url: '/blog/post_about',
   },
 ];
 

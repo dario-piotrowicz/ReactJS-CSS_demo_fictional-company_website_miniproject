@@ -19,9 +19,15 @@ const Blog = () => {
       <Route exact path={match.path}>
         <Hero isBlog />
         <main>
-          {blogPostsData.map((post, idx) => (
-            <BlogPreview key={`${post.postId}`} {...post} blogStyle={idx % 2} />
-          ))}
+          {blogPostsData
+            .sort((postA, postB) => postB.date.getTime() - postA.date.getTime())
+            .map((post, idx) => (
+              <BlogPreview
+                key={`${post.postId}`}
+                {...post}
+                blogStyle={idx % 2}
+              />
+            ))}
         </main>
       </Route>
       <Route path={`${match.path}/:postId`}>

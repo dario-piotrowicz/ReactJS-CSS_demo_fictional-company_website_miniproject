@@ -15,7 +15,7 @@ const Hero = ({ isBlog = false }) => {
         {isBlog ? null : (
           <>
             <p>We do not provide world class financial assistance!</p>
-            <Link className="btn" to="/about">
+            <Link className="btn" to="/blog/post_about">
               <FontAwesomeIcon icon={faChevronRight} /> Read More
             </Link>
           </>
