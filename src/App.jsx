@@ -6,6 +6,7 @@ import Home from './pages/home/home.page.component';
 import Footer from './components/footer/footer.component';
 import Blog from './pages/blog/blog.page.component';
 import PageNotFound from './pages/page-not-found/page-not-found.page.component';
+import 'react-image-lightbox/style.css';
 
 const App = () => {
   return (
