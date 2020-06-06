@@ -26,7 +26,7 @@ FormControl.propTypes = {
 
 const ContactSection = () => {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       <div className="image">
         <img src={contact} alt="contact" />
       </div>

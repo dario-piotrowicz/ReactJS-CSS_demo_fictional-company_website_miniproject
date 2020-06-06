@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useEffect } from 'react';
 import './blog.styles.scss';
 import Hero from '../../components/hero/hero.component';
 import BlogPreview from '../../components/blog-preview/blog-preview.component';
@@ -10,6 +10,10 @@ export const BlogPostsContext = createContext([]);
 
 const Blog = () => {
   const match = useRouteMatch();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [window, match]);
+
   return (
     <Switch>
       <Route exact path={match.path}>
