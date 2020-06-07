@@ -42,19 +42,19 @@ const CasesSection = () => {
           </p>
         </header>
         <div className="images">
-          <div className="column">
+          <div className="pair">
             <img src={cases1Img} alt="case" onClick={() => openLightboxOn(0)} />
             <img src={cases2Img} alt="case" onClick={() => openLightboxOn(1)} />
           </div>
-          <div className="column">
+          <div className="pair">
             <img src={cases3Img} alt="case" onClick={() => openLightboxOn(2)} />
             <img src={cases4Img} alt="case" onClick={() => openLightboxOn(3)} />
           </div>
-          <div className="column">
+          <div className="pair">
             <img src={cases5Img} alt="case" onClick={() => openLightboxOn(4)} />
             <img src={cases6Img} alt="case" onClick={() => openLightboxOn(5)} />
           </div>
-          <div className="column">
+          <div className="pair">
             <img src={cases7Img} alt="case" onClick={() => openLightboxOn(6)} />
             <img src={cases8Img} alt="case" onClick={() => openLightboxOn(7)} />
           </div>
