@@ -22,6 +22,20 @@ const publish = () => {
   });
 };
 
+const create404File = (result) => {
+  fs.writeFile('dist/404.html', result, 'utf8', function (err) {
+    if (err) {
+      console.error(
+        '\x1b[31m',
+        `Error, unable to write to dist/index.html file
+      `
+      );
+    } else {
+      publish();
+    }
+  });
+};
+
 const updateIndexHtml = () => {
   const githubIoBase = 'https://dario-piotrowicz.github.io';
   const repoName = 'ReactJS-CSS_demo_fictional-company_website_miniproject';
@@ -50,7 +64,7 @@ const updateIndexHtml = () => {
       `
         );
       } else {
-        publish();
+        create404File(result);
       }
     });
   });
