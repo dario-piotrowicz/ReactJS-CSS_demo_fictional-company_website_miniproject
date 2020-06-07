@@ -10,7 +10,7 @@ import 'react-image-lightbox/style.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={document.IndexBrowserRouterBasename}>
       <Header />
       <Switch>
         <Route exact path="/">
