@@ -11,3 +11,12 @@ This time I'm still not using CRA, but I want to use JSX, Babel and Webpack (and
 One more aspect I'd like to mention is:
 
 - All UI Designs and HTML/CSS are taken from the course and I'm coding along, so that is not designed by me, what is completely mine are the files structure and the aforementioned configration and react aspects
+  \
+  \
+  \
+  &NewLine;
+
+### Deployment
+
+The project has been deployed via github pages at the following link:\
+ https://dario-piotrowicz.github.io/eactJS-CSS_demo_fictional-company_website_miniproject/
