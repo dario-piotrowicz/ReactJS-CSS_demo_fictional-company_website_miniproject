@@ -5,6 +5,12 @@ import { faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom';
 
+const scroolToElement = (el) => {
+  setTimeout(() => {
+    el.scrollIntoView({ behavior: 'smooth' });
+  });
+};
+
 const Header = () => {
   const location = useLocation();
   const isHomeOrBlog =
@@ -43,27 +49,27 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link smooth to="/#home">
+            <Link smooth to="/#home" scroll={scroolToElement}>
               Home
             </Link>
           </li>
           <li>
-            <Link smooth to="/#about">
+            <Link scroll={scroolToElement} to="/#about">
               About
             </Link>
           </li>
           <li>
-            <Link smooth to="/#cases">
+            <Link scroll={scroolToElement} to="/#cases">
               Cases
             </Link>
           </li>
           <li>
-            <Link smooth to="/#blog">
+            <Link scroll={scroolToElement} to="/#blog">
               Blog
             </Link>
           </li>
           <li>
-            <Link smooth to="/#contact">
+            <Link scroll={scroolToElement} to="/#contact">
               Contact
             </Link>
           </li>
