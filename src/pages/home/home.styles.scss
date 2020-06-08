@@ -1,4 +1,8 @@
 span.anchor-span {
   position: relative;
-  top: -80px;
+  top: -70px;
+
+  @media (max-width: 850px) {
+    top: -120px;
+  }
 }
