@@ -33,6 +33,7 @@ const deleteDist = () => {
         'Your project should have been deployed at the following url:'
       );
       consoleLogSuccess(`${githubIoBase}/${repoName}/`);
+      console.log('\x1b[0m', '');
     })
     .catch(() => consoleError('unable to delete temporary dist folder'));
 };
