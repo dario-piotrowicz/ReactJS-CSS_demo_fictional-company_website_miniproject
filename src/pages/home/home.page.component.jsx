@@ -25,6 +25,7 @@ const Home = () => {
       <span className="anchor-span" id="blog" />
       <BlogSection />
       <TeamSection />
+      <span className="anchor-span" id="contact" />
       <ContactSection />
     </main>
   );
