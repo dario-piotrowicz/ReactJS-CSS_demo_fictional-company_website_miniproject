@@ -4,18 +4,23 @@ const del = require('del');
 const fs = require('fs');
 var npm = require('npm');
 
+const consoleError = (message) => {
+  console.error('\x1b[31m', message);
+  console.error('');
+};
+
 const deleteDist = () => {
   del(['dist'])
     .then()
     .catch(() => {
-      console.error('unable to delete temporary dist folder');
+      consoleError('unable to delete temporary dist folder');
     });
 };
 
 const publish = () => {
   ghpages.publish('dist', (err) => {
     if (err) {
-      return console.error(err);
+      consoleError('ghpages was unable to publish dist folder');
     } else {
       deleteDist();
     }
@@ -25,11 +30,7 @@ const publish = () => {
 const create404File = (result) => {
   fs.writeFile('dist/404.html', result, 'utf8', function (err) {
     if (err) {
-      console.error(
-        '\x1b[31m',
-        `Error, unable to write to dist/index.html file
-      `
-      );
+      consoleError('Error, unable to write to dist/index.html file');
     } else {
       publish();
     }
@@ -42,11 +43,7 @@ const updateIndexHtml = () => {
 
   fs.readFile('dist/index.html', 'utf8', function (err, data) {
     if (err) {
-      console.error(
-        '\x1b[31m',
-        `Error, unable to read dist/index.html file
-      `
-      );
+      consoleError('Error, unable to read dist/index.html file');
     }
 
     let result = data.replace(/src="\//g, `src="${githubIoBase}/${repoName}/`);
@@ -58,11 +55,7 @@ const updateIndexHtml = () => {
 
     fs.writeFile('dist/index.html', result, 'utf8', function (err) {
       if (err) {
-        console.error(
-          '\x1b[31m',
-          `Error, unable to write to dist/index.html file
-      `
-        );
+        consoleError('Error, unable to write to dist/index.html file');
       } else {
         create404File(result);
       }
@@ -73,11 +66,7 @@ const updateIndexHtml = () => {
 const createDist = () => {
   ncp('public', 'dist', (err) => {
     if (err) {
-      console.error(
-        '\x1b[31m',
-        `Error, unable to create 'dist' folder
-      `
-      );
+      consoleError(`Error, unable to create 'dist' folder`);
     } else {
       updateIndexHtml();
     }
@@ -87,19 +76,11 @@ const createDist = () => {
 const build = () => {
   npm.load((err) => {
     if (err) {
-      console.error(
-        '\x1b[31m',
-        `Error in loading npm
-      `
-      );
+      consoleError('Error in loading npm');
     } else {
       npm.commands.run(['build'], (err) => {
         if (err) {
-          console.error(
-            '\x1b[31m',
-            `Error in running 'build' script
-            `
-          );
+          consoleError(`Error in running 'build' script`);
         } else {
           createDist();
         }
@@ -109,14 +90,11 @@ const build = () => {
 };
 
 if (fs.existsSync('./dist')) {
-  console.error(
-    '\x1b[31m',
+  consoleError(
     `A folder called 'dist' is present in the root directory,
         this script expects that no such folder exists,
-              please remove it and try again
-    `
+              please remove it and try again`
   );
-  process.exit();
 } else {
   build();
 }
