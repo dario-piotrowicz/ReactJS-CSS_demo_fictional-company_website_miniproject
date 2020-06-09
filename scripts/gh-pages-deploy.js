@@ -9,17 +9,17 @@ const repoName = 'ReactJS-CSS_demo_fictional-company_website_miniproject';
 
 const consoleError = (message) => {
   console.error('\x1b[31m', message);
-  console.error('');
+  console.log('\x1b[0m', '');
 };
 
 const consoleLogSuccess = (message) => {
   console.log('\x1b[32m', message);
-  console.log('');
+  console.log('\x1b[0m', '');
 };
 
 const consoleLogInfo = (message) => {
   console.log('\x1b[33m', message);
-  console.log('');
+  console.log('\x1b[0m', '');
 };
 
 const deleteDist = () => {
@@ -33,7 +33,6 @@ const deleteDist = () => {
         'Your project should have been deployed at the following url:'
       );
       consoleLogSuccess(`${githubIoBase}/${repoName}/`);
-      console.log('\x1b[0m', '');
     })
     .catch(() => consoleError('unable to delete temporary dist folder'));
 };
