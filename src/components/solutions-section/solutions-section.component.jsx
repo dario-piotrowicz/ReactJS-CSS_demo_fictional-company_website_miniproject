@@ -1,13 +1,12 @@
 import React from 'react';
 import './solutions-section.styles.scss';
-import peopleImg from '../../assets/images/home/people.jpg';
 import ContentTextPreview from '../content-text-preview/content-text-preview.component';
 
 const SolutionsSection = () => {
   return (
     <section className="solutions-section">
       <div className="image">
-        <img src={peopleImg} alt="people" />
+        <img src="./images/home/people.jpg" alt="people" />
       </div>
       <div className="content">
         <ContentTextPreview

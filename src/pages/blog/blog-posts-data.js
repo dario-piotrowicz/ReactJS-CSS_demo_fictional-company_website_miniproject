@@ -1,12 +1,7 @@
-import blogImg1 from '../../assets/images/blog/blog1.jpg';
-import blogImg2 from '../../assets/images/blog/blog2.jpg';
-import blogImg3 from '../../assets/images/blog/blog3.jpg';
-import peopleImg from '../../assets/images/home/people.jpg';
-
 const blogPostsData = [
   {
     postId: 'post1',
-    imageSrc: blogImg1,
+    imageSrcFromImages: 'blog/blog1.jpg',
     title: 'This is a great website',
     author: 'John',
     date: new Date(2020, 1, 20),
@@ -29,7 +24,7 @@ const blogPostsData = [
   },
   {
     postId: 'post2',
-    imageSrc: blogImg2,
+    imageSrcFromImages: 'blog/blog2.jpg',
     title: 'My Blog Post',
     author: 'She',
     date: new Date(2020, 1, 23),
@@ -54,7 +49,7 @@ const blogPostsData = [
   },
   {
     postId: 'post3',
-    imageSrc: blogImg3,
+    imageSrcFromImages: 'blog/blog3.jpg',
     title: 'I love Coffee!',
     author: 'Coffee Guy',
     date: new Date(2020, 2, 24),
@@ -70,7 +65,7 @@ const blogPostsData = [
   },
   {
     postId: 'post_about',
-    imageSrc: peopleImg,
+    imageSrcFromImages: 'home/people.jpg',
     title: 'FictionalFinances',
     author: 'John',
     date: new Date(2020, 0, 1),

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const BlogPreview = ({
-  imageSrc,
+  imageSrcFromImages,
   title,
   author,
   date,
@@ -18,7 +18,7 @@ const BlogPreview = ({
   return (
     <article className={`blog-preview style-${blogStyle ? blogStyle : 0}`}>
       <div className="image">
-        <img src={imageSrc} alt="blog" />
+        <img src={`./images/${imageSrcFromImages}`} alt="blog" />
       </div>
       <div className="content">
         <div className="content-text-preview">
@@ -38,7 +38,7 @@ const BlogPreview = ({
   );
 };
 BlogPreview.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
+  imageSrcFromImages: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,

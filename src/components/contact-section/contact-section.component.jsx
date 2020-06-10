@@ -1,6 +1,5 @@
 import React from 'react';
 import './contact-section.styles.scss';
-import contactImg from '../../assets/images/home/contact.jpg';
 import PropTypes from 'prop-types';
 
 const FormControl = ({ name, type }) => {
@@ -28,7 +27,7 @@ const ContactSection = () => {
   return (
     <section className="contact-section">
       <div className="image">
-        <img src={contactImg} alt="contact" />
+        <img src="./images/home/contact.jpg" alt="contact" />
       </div>
       <div className="content">
         <h2>Request something!</h2>

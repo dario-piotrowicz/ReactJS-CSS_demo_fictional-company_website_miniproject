@@ -1,8 +1,5 @@
 import React from 'react';
 import './team-section.styles.scss';
-import person1Img from '../../assets/images/team/person1.jpg';
-import person2Img from '../../assets/images/team/person2.jpg';
-import person3Img from '../../assets/images/team/person3.jpg';
 import PropTypes from 'prop-types';
 
 const PersonItem = ({ imageSrc, name, position }) => {
@@ -21,9 +18,9 @@ PersonItem.propTypes = {
 };
 
 const peopleDetails = [
-  { imageSrc: person1Img, name: 'John', position: 'President' },
-  { imageSrc: person2Img, name: 'She', position: 'Vice President' },
-  { imageSrc: person3Img, name: 'Coffee Guy', position: 'Marketing Head' },
+  { imageSrc: './images/team/person1.jpg', name: 'John', position: 'President' },
+  { imageSrc: './images/team/person2.jpg', name: 'She', position: 'Vice President' },
+  { imageSrc: './images/team/person3.jpg', name: 'Coffee Guy', position: 'Marketing Head' },
 ];
 
 const TeamSection = () => {

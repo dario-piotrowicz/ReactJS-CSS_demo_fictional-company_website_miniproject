@@ -1,6 +1,6 @@
 import React from 'react';
 import './blog-section.styles.scss';
-import blogImg from '../../assets/images/home/blog.jpg';
+
 import ContentTextPreview from '../content-text-preview/content-text-preview.component';
 
 const BlogSection = () => {
@@ -19,7 +19,7 @@ const BlogSection = () => {
         />
       </div>
       <div className="image">
-        <img src={blogImg} alt="people" />
+        <img src="./images/home/blog.jpg" alt="people" />
       </div>
     </section>
   );

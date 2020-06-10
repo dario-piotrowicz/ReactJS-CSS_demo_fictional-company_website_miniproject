@@ -29,7 +29,7 @@ const Post = () => {
     );
   }
 
-  const { title, author, date, imageSrc, paragraphs } = post;
+  const { title, author, date, imageSrcFromImages, paragraphs } = post;
   const dateStr = date.toDateString();
   return (
     <>
@@ -42,7 +42,7 @@ const Post = () => {
             Posted by <strong>{author}</strong> | {dateStr}{' '}
           </span>
         </p>
-        <img src={imageSrc} alt="post" />
+        <img src={`../images/${imageSrcFromImages}`} alt="post" />
         {paragraphs.map((paragraph, idx) => (
           <p className="inner" key={idx}>
             {paragraph}
