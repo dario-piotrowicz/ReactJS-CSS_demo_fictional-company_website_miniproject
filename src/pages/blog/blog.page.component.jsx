@@ -1,10 +1,11 @@
-import React, { createContext, useEffect } from 'react';
+import React, { createContext, useEffect, lazy } from 'react';
 import './blog.styles.scss';
 import Hero from '../../components/hero/hero.component';
 import BlogPreview from '../../components/blog-preview/blog-preview.component';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
-import Post from '../post/post.page.component';
 import blogPostsData from './blog-posts-data';
+
+const Post = lazy(() => import('../post/post.page.component'));
 
 export const BlogPostsContext = createContext([]);
 

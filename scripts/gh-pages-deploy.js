@@ -110,15 +110,19 @@ const build = () => {
     if (err) {
       consoleError('Error in loading npm');
     } else {
-      npm.commands.run(['build'], (err) => {
-        if (err) {
-          consoleError(`Error in running 'build' script`);
-        } else {
-          console.log('');
-          consoleLogSuccess('build script run successfully');
-          createDist();
+      npm.commands.run(
+        ['build', `--output-public-path "/${repoName}/"`],
+        (err) => {
+          if (err) {
+            console.log(err);
+            consoleError(`Error in running 'build' script`);
+          } else {
+            console.log('');
+            consoleLogSuccess('build script run successfully');
+            createDist();
+          }
         }
-      });
+      );
     }
   });
 };
