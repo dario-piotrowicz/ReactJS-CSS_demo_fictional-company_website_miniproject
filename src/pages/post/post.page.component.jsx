@@ -16,7 +16,7 @@ const Post = () => {
   if (!post) {
     return (
       <>
-        <Hero isBlog title="POST NOT FOUND" />
+        <Hero isPost title="POST NOT FOUND" />
         <main className="post-not-found">
           <FontAwesomeIcon
             className="fa-icon"
@@ -33,7 +33,7 @@ const Post = () => {
   const dateStr = date.toDateString();
   return (
     <>
-      <Hero isBlog />
+      <Hero isPost />
       <main className="post">
         <h2>{title}</h2>
         <p className="meta">
