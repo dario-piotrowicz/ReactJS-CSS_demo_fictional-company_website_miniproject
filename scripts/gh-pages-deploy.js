@@ -114,7 +114,6 @@ const build = () => {
         ['build', `--output-public-path "/${repoName}/"`],
         (err) => {
           if (err) {
-            console.log(err);
             consoleError(`Error in running 'build' script`);
           } else {
             console.log('');
