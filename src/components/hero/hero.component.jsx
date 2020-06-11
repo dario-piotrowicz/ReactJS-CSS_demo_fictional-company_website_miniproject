@@ -8,8 +8,13 @@ import PropTypes from 'prop-types';
 const Hero = ({ isBlog = false }) => {
   const title = isBlog ? 'Blog' : 'This Site Is Fictional';
 
+  const backgroundUrl = `./images/home/${isBlog ? 'blog' : 'showcase'}.jpg`;
+  const backgroundStyle = {
+    background: `url('${backgroundUrl}') no-repeat center center/cover`,
+  };
+
   return (
-    <section className={`hero ${isBlog ? 'blog' : ''}`}>
+    <section className={`hero ${isBlog ? 'blog' : ''}`} style={backgroundStyle}>
       <div className="content">
         <h1>{title}</h1>
         {isBlog ? null : (

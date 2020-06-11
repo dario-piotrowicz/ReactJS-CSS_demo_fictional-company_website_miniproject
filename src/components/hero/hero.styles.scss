@@ -1,13 +1,9 @@
 .hero {
-  background: url('../../assets/images/home/showcase.jpg') no-repeat center
-    center/cover;
   height: 100vh;
   position: relative;
   color: white;
 
   &.blog {
-    background: url('../../assets/images/home/blog.jpg') no-repeat center
-      center/cover;
     height: 30vh;
   }
 
