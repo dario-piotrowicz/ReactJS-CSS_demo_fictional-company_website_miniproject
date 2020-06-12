@@ -16,7 +16,7 @@ const Post = () => {
   if (!post) {
     return (
       <>
-        <Hero isPost title="POST NOT FOUND" />
+        <Hero isBlog title="POST NOT FOUND" />
         <main className="post-not-found">
           <FontAwesomeIcon
             className="fa-icon"
@@ -33,7 +33,7 @@ const Post = () => {
   const dateStr = date.toDateString();
   return (
     <>
-      <Hero isPost />
+      <Hero isBlog />
       <main className="post">
         <h2>{title}</h2>
         <p className="meta">
@@ -42,7 +42,7 @@ const Post = () => {
             Posted by <strong>{author}</strong> | {dateStr}{' '}
           </span>
         </p>
-        <img src={`../images/${imageSrcFromImages}`} alt="post" />
+        <img src={`./images/${imageSrcFromImages}`} alt="post" />
         {paragraphs.map((paragraph, idx) => (
           <p className="inner" key={idx}>
             {paragraph}

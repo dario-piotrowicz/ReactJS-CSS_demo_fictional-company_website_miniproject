@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import './App.scss';
 import Header from '../src/components/header/header.component';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Footer from './components/footer/footer.component';
 import 'react-image-lightbox/style.css';
 
@@ -13,7 +13,7 @@ const PageNotFound = lazy(() =>
 
 const App = () => {
   return (
-    <BrowserRouter basename={document.IndexBrowserRouterBasename}>
+    <HashRouter basename={document.IndexBrowserRouterBasename}>
       <Header />
       <Suspense fallback={<div id="empty-page" />}>
         <Switch>
@@ -29,7 +29,7 @@ const App = () => {
         </Switch>
       </Suspense>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
