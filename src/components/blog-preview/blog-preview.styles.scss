@@ -4,6 +4,10 @@ article.blog-preview {
   display: flex;
   flex-wrap: wrap;
 
+  .content-text-preview {
+    @include content-text-preview;
+  }
+
   &.style-1 {
     flex-direction: row-reverse;
   }
