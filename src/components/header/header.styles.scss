@@ -26,6 +26,11 @@ header#main-header {
 
   h1 {
     font-weight: 400;
+    cursor: pointer;
+
+    a {
+      color: #fff;
+    }
   }
 
   ul {

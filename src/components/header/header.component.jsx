@@ -38,13 +38,15 @@ const Header = () => {
       className={`${isHomeOrBlog && transparentBg ? 'transparent-bg' : ''}`}
     >
       <h1>
-        <span className="text-primary">
-          <span className="fa-icon">
-            <FontAwesomeIcon icon={faMoneyBillWave} />
+        <Link smooth to="/#home" scroll={scroolToElement}>
+          <span className="text-primary">
+            <span className="fa-icon">
+              <FontAwesomeIcon icon={faMoneyBillWave} />
+            </span>
+            Fictional
           </span>
-          Fictional
-        </span>
-        Finances
+          Finances
+        </Link>
       </h1>
       <nav>
         <ul>
