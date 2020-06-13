@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contact-section.styles.scss';
 import PropTypes from 'prop-types';
 
@@ -24,14 +24,42 @@ FormControl.propTypes = {
 };
 
 const ContactSection = () => {
+  const [attemp, setAttempt] = useState(false);
+
+  if (attemp) {
+    setTimeout(() => {
+      setAttempt(false);
+    }, 2000);
+  }
+
   return (
     <section className="contact-section">
       <div className="image">
-        <img src="./images/home/contact.jpg" alt="contact" />
+        <img
+          className="placeholder"
+          src="./images/home/contact.jpg"
+          alt="placeholder"
+        />
+        <img
+          className="not-implemented"
+          src="./images/home/contact-not-implemented.jpg"
+          alt="contact not implemented"
+        />
+        <img
+          className={`standard ${attemp ? 'attempt' : ''}`}
+          src="./images/home/contact.jpg"
+          alt="contact"
+        />
       </div>
       <div className="content">
         <h2>Request something!</h2>
-        <form action="">
+        <form
+          action=""
+          onSubmit={(event) => {
+            event.preventDefault();
+            setAttempt(true);
+          }}
+        >
           <FormControl name="name" />
           <FormControl name="email" type="email" />
           <FormControl name="phone" />
