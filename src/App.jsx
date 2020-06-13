@@ -13,7 +13,7 @@ const PageNotFound = lazy(() =>
 
 const App = () => {
   return (
-    <HashRouter basename={document.IndexBrowserRouterBasename}>
+    <HashRouter basename="/">
       <Header />
       <Suspense fallback={<div id="empty-page" />}>
         <Switch>

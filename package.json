@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --mode development --open --output-public-path \"/\"",
     "build": "webpack --mode production",
     "format": "prettier --write \"src/**/*.(js|jsx)\"",
-    "deploy": "node scripts/gh-pages-deploy.js"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d public/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
