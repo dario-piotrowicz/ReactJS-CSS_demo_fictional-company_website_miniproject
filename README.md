@@ -8,9 +8,8 @@ In the previous miniproject I did ( [Demo Hotel Miniproject](https://github.com/
 
 This time I'm still not using CRA, but I want to use JSX, Babel and Webpack (and SASS). So the new challenge is to setup the whole react application up by myself and configuring manually the aforementioned tools.
 
-One more aspect I'd like to mention is:
-
-- All UI Designs and HTML/CSS are taken from the course and I'm coding along, so that is not designed by me, what is completely mine are the files structure and the aforementioned configration and react aspects
+\
+Most of the UI designs and HTML/CSS are taken from the course, so that is not designed by me, what is 100% completely mine is the files structure, the aforementioned configration and the react aspects.
   \
   \
   \
@@ -19,4 +18,4 @@ One more aspect I'd like to mention is:
 ### Deployment
 
 The project has been deployed via github pages at the following link:\
- https://dario-piotrowicz.github.io/ReactJS-CSS_demo_fictional-company_website_miniproject/
+ https://dario-piotrowicz.github.io/ReactJS-SCSS_demo_fictional-company_website_miniproject/
